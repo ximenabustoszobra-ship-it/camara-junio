@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,21 +11,18 @@
             box-sizing: border-box;
         }
 
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #8B6914 0%, #D4AF37 50%, #8B4513 100%);
             color: #333;
             line-height: 1.6;
         }
-
 
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-
 
         header {
             text-align: center;
@@ -34,13 +31,11 @@
             margin-bottom: 30px;
         }
 
-
         header h1 {
             font-size: 2.5em;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-
 
         header .subtitle {
             font-size: 1.2em;
@@ -49,29 +44,55 @@
             margin: 0 auto;
         }
 
-
         .intro-section {
-            background: white;
+            background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%);
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 2px solid #D4AF37;
         }
 
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .photo-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #D4AF37;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-circle:hover {
+            transform: scale(1.1);
+        }
+
+        .photo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .intro-section h2 {
-            color: #667eea;
+            color: #8B4513;
             margin-bottom: 20px;
             font-size: 1.8em;
+            text-align: center;
         }
-
 
         .intro-section p {
             margin-bottom: 15px;
             font-size: 1.1em;
-            color: #555;
+            color: #5D4037;
         }
-
 
         .intro-section ul {
             list-style: none;
@@ -79,12 +100,11 @@
             margin-bottom: 20px;
         }
 
-
         .intro-section ul li {
             padding: 8px 0;
             position: relative;
+            color: #5D4037;
         }
-
 
         .intro-section ul li:before {
             content: "✨";
@@ -92,23 +112,21 @@
             left: -25px;
         }
 
-
         .info-cards {
-            background: white;
+            background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%);
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 2px solid #D4AF37;
         }
 
-
         .info-cards h2 {
-            color: #667eea;
+            color: #8B4513;
             margin-bottom: 25px;
             font-size: 1.8em;
             text-align: center;
         }
-
 
         .card-grid {
             display: grid;
@@ -117,179 +135,186 @@
             margin-bottom: 20px;
         }
 
-
         .info-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #D4AF37 0%, #C9A961 100%);
             padding: 25px;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
         }
-
 
         .info-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.5);
         }
-
 
         .info-card .icon {
             font-size: 2.5em;
             margin-bottom: 15px;
         }
 
-
         .info-card h3 {
-            color: #667eea;
+            color: #3E2723;
             margin-bottom: 10px;
             font-size: 1.2em;
         }
 
-
         .info-card p {
-            color: #666;
+            color: #5D4037;
             font-size: 0.95em;
             margin-bottom: 15px;
         }
 
-
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #8B4513 0%, #D4AF37 100%);
             color: white;
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
             margin: 5px;
         }
 
-
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.6);
+            background: linear-gradient(135deg, #A0522D 0%, #FFD700 100%);
         }
 
-
         .events-section {
-            background: white;
+            background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%);
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 2px solid #D4AF37;
         }
 
-
         .events-section h2 {
-            color: #667eea;
+            color: #8B4513;
             margin-bottom: 30px;
             font-size: 1.8em;
             text-align: center;
         }
 
-
         .event-card {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            background: linear-gradient(135deg, #F4E4C1 0%, #E8D5B7 100%);
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
+            border: 2px solid #D4AF37;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
         }
-
 
         .event-card:hover {
             transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
         }
-
 
         .event-header {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            flex-wrap: wrap;
         }
-
 
         .event-icon {
             font-size: 2em;
             margin-right: 15px;
         }
 
-
         .event-date {
             font-weight: bold;
-            color: #764ba2;
+            color: #8B4513;
             font-size: 1.1em;
         }
 
-
         .event-title {
-            color: #333;
+            color: #3E2723;
             font-size: 1.3em;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-
         .event-description {
-            color: #555;
+            color: #5D4037;
             margin-bottom: 15px;
         }
 
-
         .event-note {
-            background: rgba(255,255,255,0.7);
+            background: rgba(212, 175, 55, 0.3);
             padding: 8px 12px;
             border-radius: 5px;
             font-size: 0.9em;
             margin-bottom: 15px;
             display: inline-block;
+            border: 1px solid #D4AF37;
+            color: #8B4513;
+            font-weight: bold;
         }
 
-
         footer {
-            background: white;
+            background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%);
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             margin-bottom: 30px;
+            border: 2px solid #D4AF37;
         }
 
-
         footer h3 {
-            color: #667eea;
+            color: #8B4513;
             margin-bottom: 15px;
             font-size: 1.5em;
         }
 
-
         footer p {
-            color: #666;
+            color: #5D4037;
             font-size: 1.1em;
         }
-
 
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
             }
 
-
             .card-grid {
                 grid-template-columns: 1fr;
             }
-
 
             .event-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-
             .event-icon {
                 margin-bottom: 10px;
+            }
+
+            .photo-circle {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-circle {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 1.7em;
+            }
+
+            .intro-section, .info-cards, .events-section, footer {
+                padding: 20px;
             }
         }
     </style>
@@ -301,9 +326,19 @@
             <p class="subtitle">Recalibración y elevación de la conciencia a dimensiones superiores</p>
         </header>
 
-
         <section class="intro-section">
             <h2>🔮 ¿Qué es la Cámara Taquiónica?</h2>
+            
+            <!-- Galería de fotos circulares -->
+            <div class="photo-gallery">
+                <div class="photo-circle">
+                    <img src="xime-ia-taquiones_72a3c3a3-39b2-41d9-953b-8abee8cf0e5a.jpeg" alt="Cámara Taquiónica Interior">
+                </div>
+                <div class="photo-circle">
+                    <img src="domo-ia_16c6f92b-72da-4de1-8127-518d348e0a96.jpeg" alt="Domo Geodésico">
+                </div>
+            </div>
+
             <p>La Cámara Taquiónica es un espacio diseñado para concentrar energía taquiónica cósmica, generando un campo energético que favorece a las personas en la recalibración y elevación de la conciencia a dimensiones superiores de manifestación.</p>
             
             <p><strong>Esta cámara se encuentra dentro de un domo geodésico</strong>, lo que potencia la experiencia al combinar:</p>
@@ -313,7 +348,6 @@
                 <li>Estado mental expandido</li>
             </ul>
         </section>
-
 
         <section class="info-cards">
             <h2>📋 Información General</h2>
@@ -325,14 +359,12 @@
                     <a href="https://forms.gle/sU3WvPPsegr7XZsg6" target="_blank" class="btn">Ver Información</a>
                 </div>
 
-
                 <div class="info-card">
                     <div class="icon">📅</div>
                     <h3>Sesiones Individuales</h3>
                     <p>Agenda tu sesión personal de 90 minutos</p>
                     <a href="https://calendly.com/taquiones/90min?month=2024-09" target="_blank" class="btn">Agendar Sesión</a>
                 </div>
-
 
                 <div class="info-card">
                     <div class="icon">📍</div>
@@ -343,10 +375,8 @@
             </div>
         </section>
 
-
         <section class="events-section">
             <h2>🗓️ Actividades de Junio</h2>
-
 
             <div class="event-card">
                 <div class="event-header">
@@ -360,7 +390,6 @@
                 <a href="https://ximenabustoszobra-ship-it.github.io/camarayhandpan/#inscripcion" target="_blank" class="btn">Inscribirme</a>
             </div>
 
-
             <div class="event-card">
                 <div class="event-header">
                     <div class="event-icon">🌟</div>
@@ -372,7 +401,6 @@
                 </div>
                 <a href="https://ximenabustoszobra-ship-it.github.io/tallerfusion/" target="_blank" class="btn">Más Información</a>
             </div>
-
 
             <div class="event-card">
                 <div class="event-header">
@@ -388,7 +416,6 @@
                 <a href="https://ximenabustoszobra-ship-it.github.io/transformacionconsciente1/" target="_blank" class="btn">Inscribirme</a>
             </div>
 
-
             <div class="event-card">
                 <div class="event-header">
                     <div class="event-icon">🧘</div>
@@ -402,7 +429,6 @@
             </div>
         </section>
 
-
         <footer>
             <h3>💜 ¡Te Esperamos!</h3>
             <p><strong>Ximena Bustos Zobra</strong></p>
@@ -411,3 +437,6 @@
     </div>
 </body>
 </html>
+        
+
+        
