@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -12,19 +13,19 @@
 
   <style>
     :root {
-      --bg-dark: #0b0b16;
-      --bg-deep: #111126;
-      --bg-card: rgba(255, 255, 255, 0.08);
-      --bg-card-strong: rgba(255, 255, 255, 0.12);
-      --text: #f5f0e8;
-      --text-soft: #d9d1c4;
-      --gold: #d8b36a;
-      --gold-soft: #f1d49a;
-      --violet: #7b61c9;
-      --teal: #6fd1c1;
+      --bg-dark: #1b1320;
+      --bg-deep: #2b1c31;
+      --bg-card: rgba(255, 245, 248, 0.08);
+      --bg-card-strong: rgba(255, 245, 248, 0.12);
+      --text: #fff7f4;
+      --text-soft: #ead8d5;
+      --gold: #d7ab7d;
+      --gold-soft: #f2d0b1;
+      --violet: #b387c8;
+      --teal: #d9a6b5;
       --line: rgba(255,255,255,0.12);
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      --radius: 22px;
+      --shadow: 0 12px 34px rgba(0,0,0,0.28);
+      --radius: 24px;
     }
 
     * {
@@ -40,9 +41,9 @@
     body {
       font-family: 'Montserrat', sans-serif;
       background:
-        radial-gradient(circle at top center, rgba(123,97,201,0.18), transparent 30%),
-        radial-gradient(circle at 80% 20%, rgba(111,209,193,0.10), transparent 25%),
-        linear-gradient(180deg, #090912 0%, #101022 40%, #15132b 100%);
+        radial-gradient(circle at top center, rgba(211,155,184,0.18), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(242,208,177,0.10), transparent 24%),
+        linear-gradient(180deg, #1a111d 0%, #2a1a2d 48%, #382331 100%);
       color: var(--text);
       line-height: 1.7;
       overflow-x: hidden;
@@ -54,11 +55,11 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
-        radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+        radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px),
+        radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 120px 120px, 180px 180px;
       background-position: 0 0, 40px 60px;
-      opacity: 0.18;
+      opacity: 0.16;
       z-index: 0;
     }
 
@@ -90,32 +91,10 @@
       text-align: center;
       padding: 90px 0 70px;
       position: relative;
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(50px);
-      opacity: 0.35;
-      z-index: 0;
-    }
-
-    .hero::before {
-      width: 320px;
-      height: 320px;
-      background: rgba(123,97,201,0.35);
-      top: 5%;
-      left: 8%;
-    }
-
-    .hero::after {
-      width: 260px;
-      height: 260px;
-      background: rgba(111,209,193,0.20);
-      bottom: 10%;
-      right: 10%;
+      background:
+        linear-gradient(180deg, rgba(17,10,20,0.48), rgba(29,18,34,0.70)),
+        radial-gradient(circle at center, rgba(242,208,177,0.08), transparent 45%),
+        url('domo.jpg') center/cover no-repeat;
     }
 
     .hero-inner {
@@ -123,16 +102,28 @@
       z-index: 1;
       max-width: 880px;
       margin: 0 auto;
+      background: rgba(25, 15, 30, 0.28);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      border-radius: 26px;
+      padding: 32px 24px;
+    }
+
+    .hero-symbol {
+      font-size: 2rem;
+      color: #f2d0b1;
+      margin-bottom: 18px;
+      opacity: 0.95;
     }
 
     .eyebrow {
       display: inline-block;
       margin-bottom: 14px;
       padding: 8px 16px;
-      border: 1px solid rgba(216,179,106,0.35);
+      border: 1px solid rgba(242,208,177,0.25);
       border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-      color: var(--gold-soft);
+      background: rgba(255,255,255,0.05);
+      color: #f2d0b1;
       font-size: 0.9rem;
       letter-spacing: 1.2px;
       text-transform: uppercase;
@@ -142,8 +133,7 @@
       font-size: clamp(2.8rem, 6vw, 5rem);
       line-height: 1.02;
       margin-bottom: 20px;
-      color: #fff8ee;
-      text-shadow: 0 0 20px rgba(216,179,106,0.10);
+      color: #fff8f2;
     }
 
     .hero p {
@@ -151,13 +141,6 @@
       margin: 0 auto 30px;
       font-size: 1.08rem;
       color: var(--text-soft);
-    }
-
-    .hero-symbol {
-      font-size: 2rem;
-      color: var(--gold);
-      margin-bottom: 18px;
-      opacity: 0.9;
     }
 
     .btn-group {
@@ -183,15 +166,15 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
-      color: #1a1624;
-      box-shadow: 0 10px 25px rgba(216,179,106,0.25);
+      background: linear-gradient(135deg, #d7ab7d, #f2d0b1);
+      color: #2b1c31;
+      box-shadow: 0 10px 25px rgba(215,171,125,0.24);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
       text-decoration: none;
-      box-shadow: 0 14px 30px rgba(216,179,106,0.35);
+      box-shadow: 0 14px 30px rgba(215,171,125,0.34);
     }
 
     .btn-secondary {
@@ -229,7 +212,7 @@
     }
 
     .glass-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
+      background: linear-gradient(180deg, rgba(255,245,248,0.10), rgba(255,245,248,0.05));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -293,7 +276,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top right, rgba(216,179,106,0.10), transparent 35%);
+      background: radial-gradient(circle at top right, rgba(242,208,177,0.10), transparent 35%);
       pointer-events: none;
     }
 
@@ -323,7 +306,7 @@
     }
 
     .note {
-      color: #ffe29c !important;
+      color: #ffe0bf !important;
       font-weight: 600;
     }
 
@@ -332,8 +315,8 @@
       margin-top: 6px;
       padding: 11px 18px;
       border-radius: 999px;
-      background: rgba(216,179,106,0.12);
-      border: 1px solid rgba(216,179,106,0.28);
+      background: rgba(242,208,177,0.10);
+      border: 1px solid rgba(242,208,177,0.24);
       color: var(--gold-soft);
       font-weight: 500;
       transition: all 0.3s ease;
@@ -343,7 +326,7 @@
 
     .link-button:hover {
       text-decoration: none;
-      background: rgba(216,179,106,0.18);
+      background: rgba(242,208,177,0.18);
       transform: translateY(-1px);
     }
 
@@ -385,8 +368,38 @@
     .divider {
       width: 90px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(216,179,106,0.75), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,208,177,0.75), transparent);
       margin: 18px auto;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #25d366, #1ebe5d);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 999px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px) scale(1.02);
+      text-decoration: none;
+      box-shadow: 0 16px 34px rgba(0,0,0,0.4);
+    }
+
+    .whatsapp-float svg {
+      width: 22px;
+      height: 22px;
+      fill: white;
     }
 
     @media (max-width: 768px) {
@@ -407,6 +420,18 @@
       .intro-box p {
         font-size: 0.98rem;
       }
+
+      .whatsapp-float span {
+        display: none;
+      }
+
+      .whatsapp-float {
+        width: 58px;
+        height: 58px;
+        justify-content: center;
+        padding: 0;
+        border-radius: 50%;
+      }
     }
   </style>
 </head>
@@ -416,11 +441,10 @@
     <div class="container hero-inner">
       <div class="hero-symbol">✧ ✺ ✧</div>
       <div class="eyebrow">Cámara Taquiónica de Escobar</div>
-      <h1>Un portal de energía, presencia y expansión de conciencia</h1>
+      <h1>Un espacio de energía, presencia y expansión</h1>
       <p>
-        Bienvenido/a a un espacio creado para concentrar energía taquiónica cósmica,
-        favoreciendo procesos de recalibración, armonización y elevación interior
-        en un entorno de profunda conexión con la naturaleza.
+        Bienvenido/a a la Cámara Taquiónica de Escobar, un espacio creado para acompañar
+        procesos de recalibración, armonización y apertura de conciencia en conexión con la naturaleza.
       </p>
 
       <div class="btn-group">
@@ -445,31 +469,24 @@
       <div class="glass-card intro-box">
         <p>
           Cada encuentro invita a habitar un espacio de pausa, escucha y transformación.
-          La energía del lugar acompaña procesos internos de apertura, integración y manifestación,
-          ofreciendo una experiencia sutil, profunda y amorosa para quienes sienten el llamado a conectar con una dimensión más elevada de sí mismos.
+          Un ámbito amoroso y consciente para integrar, expandir y conectar con dimensiones más profundas del ser.
         </p>
       </div>
 
       <div class="features">
         <div class="glass-card feature">
           <h3>🔮 Recalibración energética</h3>
-          <p>
-            Un entorno preparado para acompañar procesos de armonización, bienestar y alineación interior.
-          </p>
+          <p>Un entorno preparado para acompañar procesos de armonización, bienestar y alineación interior.</p>
         </div>
 
         <div class="glass-card feature">
           <h3>🌙 Arquitectura sagrada</h3>
-          <p>
-            El domo geodésico potencia la experiencia, sosteniendo una atmósfera de presencia, expansión y sensibilidad.
-          </p>
+          <p>El domo geodésico sostiene una atmósfera de presencia, expansión y sensibilidad.</p>
         </div>
 
         <div class="glass-card feature">
           <h3>✨ Naturaleza y conciencia</h3>
-          <p>
-            La unión entre el campo energético y el entorno natural favorece una experiencia profundamente transformadora.
-          </p>
+          <p>La unión entre campo energético y entorno natural favorece una experiencia transformadora.</p>
         </div>
       </div>
     </div>
@@ -489,7 +506,7 @@
           <div class="date">Sábado 13 de junio · 14 a 20 hs</div>
           <p>
             Junto a <strong>Belén Asin</strong>. Un encuentro de constelaciones,
-            <strong>ThetaHealing</strong> y taquiones para abrir nuevas comprensiones y movimientos internos.
+            <strong>ThetaHealing</strong> y taquiones.
           </p>
           <a class="link-button" href="https://ximenabustoszobra-ship-it.github.io/tallerfusion/" target="_blank">
             Ver más e inscribirme
@@ -500,8 +517,7 @@
           <h3>Transformación Consciente</h3>
           <div class="date">Domingo 14 de junio · 14 a 19 hs</div>
           <p>
-            Junto a <strong>Denise Lombardo</strong>. Un taller íntimo con movimientos sistémicos
-            y sesión grupal de cámara para integrar la experiencia.
+            Junto a <strong>Denise Lombardo</strong>. Movimientos sistémicos y sesión grupal de cámara para integrar la experiencia.
           </p>
           <p class="note">Cupos limitados: solo 9 personas.</p>
           <a class="link-button" href="https://ship-it.github.io/transformacionconsciente1/" target="_blank">
@@ -514,8 +530,7 @@
           <div class="date">Viernes 19 de junio · 19 a 21 hs</div>
           <p>
             Una sesión grupal en cámara taquiónica acompañada por la vibración del
-            <strong>handpan</strong> de la mano de <strong>Gisela</strong>,
-            para profundizar en un estado de calma, apertura y percepción.
+            <strong>handpan</strong> junto a <strong>Gisela</strong>.
           </p>
           <a class="link-button" href="https://ximenabustoszobra-ship-it.github.io/camarayhandpan/#inscripcion" target="_blank">
             Ver más e inscribirme
@@ -579,5 +594,20 @@
     </div>
   </footer>
 
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5491135669167?text=Hola%20Ximena,%20vi%20la%20landing%20de%20la%20C%C3%A1mara%20Taqui%C3%B3nica%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20actividades."
+    target="_blank"
+    aria-label="Escribinos por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.21c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.17.19-.33.21-.62.07-.29-.14-1.21-.45-2.31-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.12-.59.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.96 2.44.05 1.44 1.03 2.83 1.17 3.02.14.19 2.02 3.09 4.89 4.33.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.35.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33zM16.02 3.2C9.04 3.2 3.38 8.84 3.38 15.81c0 2.23.58 4.41 1.68 6.33L3.2 28.8l6.82-1.79c1.87 1.02 3.98 1.56 6.11 1.56h.01c6.97 0 12.63-5.64 12.63-12.61 0-3.38-1.31-6.56-3.7-8.95-2.39-2.39-5.57-3.81-8.95-3.81zm0 22.95h-.01c-1.89 0-3.74-.51-5.35-1.47l-.38-.23-4.05 1.06 1.08-3.95-.25-.4a10.14 10.14 0 01-1.56-5.35c0-5.61 4.56-10.17 10.18-10.17 2.71 0 5.26 1.05 7.18 2.98 1.92 1.92 2.98 4.47 2.98 7.18-.01 5.61-4.57 10.15-10.18 10.15z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
 </body>
 </html>
+
+    
+    
